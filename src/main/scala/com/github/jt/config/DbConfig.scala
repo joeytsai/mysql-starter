@@ -10,10 +10,10 @@ class DbConfig(config: Config) {
   private val pre = "db"
   JtConfig.checkValid(config, pre)
 
-  val username = config.getString(s"$pre.username")
-  val password = config.getString(s"$pre.password")
-  val url = config.getString(s"$pre.url")
-  val maxPoolSize = config.getInt(s"$pre.max.pool.size")
+  val username = config.getString(s"$pre.mysql.username")
+  val password = config.getString(s"$pre.mysql.password")
+  val url = config.getString(s"$pre.mysql.url")
+  val maxPoolSize = config.getInt(s"$pre.connection.pool.max.size")
   val debugLogging = config.getBoolean(s"$pre.debug.logging")
 }
 
